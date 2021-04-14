@@ -25,34 +25,34 @@ git commit -m "Message for this commit"<br>
 git push -u \<remote branch name> \<local branch name>
 
 *Backward:*<br>
-git reset --soft HEAD~1 (from commit to staged) [3->2]<br>
-git reset --mixed HEAD~1 (from commit to untracked) [3->1]<br>
-**DANGER**: git reset --hard HEAD~1 (from commit to clean) [3->0]<br>
+git reset --soft HEAD~ 1 (from commit to staged) [3->2]<br>
+git reset --mixed HEAD ~1 (from commit to untracked) [3->1]<br>
+**DANGER**: git reset --hard HEAD ~1 (from commit to clean) [3->0]<br>
 git restore --staged \<file> (from staged to untracked)
 git restore \<file>  (from untracked to clean, file previously at least one commit) [1->0]<br>
 
 ## List of commands seen in this file
-- <a href="#">git config</a>
-- <a href="#">git int</a>
-- <a href="#">git remote</a>
-- <a href="#">git clone</a>
-- <a href="#">git add | stage</a>
-- <a href="#">git status</a>
-- <a href="#">git branch</a>
-- <a href="#">git checkout</a>
-- <a href="#">git merge</a>
-- <a href="#">git commit</a>
-- <a href="#">git log</a>
-- <a href="#">git diff</a>
-- <a href="#">git stash</a>
-- <a href="#">git tag</a>
-- <a href="#">git pull</a>
-- <a href="#">git fetch</a>
-- <a href="#">git push</a>
-- <a href="#">git blame</a>
-- <a href="#">git reset</a>
-- <a href="#">git rebaes</a>
-- <a href="#">git cherry-pick</a>
+- <a href="#Basic-section">git config</a>
+- <a href="#Start-a-local-repository-section">git int</a>
+- <a href="#Start-a-local-repository-section">git remote</a>
+- <a href="#Start-a-remote-repository-section">git clone</a>
+- <a href="#Add-section">git add | stage</a>
+- <a href="#Check-section">git status</a>
+- <a href="#Commit-section">git commit</a>
+- <a href="#Branch-section">git branch</a>
+- <a href="#Branch-section">git checkout</a>
+- <a href="#Merge-section">git merge</a>
+- <a href="#Log-section">git log</a>
+- <a href="#Diff-section">git diff</a>
+- <a href="#Stash-section">git stash</a>
+- <a href="#Tag-section">git tag</a>
+- <a href="#Download-section">git pull</a>
+- <a href="#Download-section">git fetch</a>
+- <a href="#Push-section">git push</a>
+- <a href="#Blame-section">git blame</a>
+- <a href="#Reset-section">git reset</a>
+- <a href="#Rebase-section">git rebaes</a>
+- <a href="#Cherry-pick-section">git cherry-pick</a>
 
 
 <br>
@@ -138,6 +138,24 @@ To view the files|folders status (with -s give the ouput in the short-format)
 
 <br>
 
+## Commit section
+
+To create a commit (use your default-inferface)
+
+    git commit
+
+To create a commit & put a message
+
+    git commit -m "your message, no more than 52 letters"
+
+To create add ALL files to stage area & commit with a message
+
+    git commit -a -m "your message, no more than 52 letters"
+
+To redo the last commit
+
+    git commit --amend 
+<br>
 
 ## Branch section
 
@@ -183,25 +201,6 @@ To delete a branch
 To merge two branches. You must be in the branch you want & put the name of the branch that will come to merge
 
     git merge <branch name>
-<br>
-
-## Commit section
-
-To create a commit (use your default-inferface)
-
-    git commit
-
-To create a commit & put a message
-
-    git commit -m "your message, no more than 52 letters"
-
-To create add ALL files to stage area & commit with a message
-
-    git commit -a -m "your message, no more than 52 letters"
-
-To redo the last commit
-
-    git commit --amend 
 <br>
 
 ## Log section
@@ -353,3 +352,14 @@ To know who write the file (find the commit author) & in a specific lines (4 to 
 To know who write the file. (view full hash commit)
 
     git blame -l <file>
+<br>
+
+## Reset section
+
+<br>
+
+## Rebase section
+
+<br>
+
+## Cherry-pick section
