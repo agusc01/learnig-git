@@ -356,10 +356,48 @@ To know who write the file. (view full hash commit)
 
 ## Reset section
 
+To delete the last commit (working directory = red), you can use a pointer HEAD reference, even to a specific commit, up to a branch or a tag
+
+    git reset --mixed HEAD
+    git reset --mixed HEAD ~n
+    git reset --mixed <hash commit>
+    git reset --mixed <branch name>
+    git reset --mixed <tag name>
+
+To delete the last commit (staging area = green),  you can use a pointer HEAD reference, even to a specific commit, up to a branch or a tag
+
+    git reset --soft HEAD
+    git reset --soft HEAD ~n
+    git reset --soft <hash commit>
+    git reset --soft <branch name>
+    git reset --soft <tag name>
+
+To delete the last commit (clean directory = empty),  you can use a pointer HEAD reference, even to a specific commit, up to a branch or a tag
+
+    git reset --hard HEAD
+    git reset --hard HEAD ~n
+    git reset --hard <hash commit>
+    git reset --hard <branch name>
+    git reset --hard <tag name>
+
 <br>
 
 ## Rebase section
 
+<img src="beforeRebase.png" alt="before rebase"> 
+
+    git checkout experiment && git rebase master
+
+<img src="afterRebase.png" alt="after rebase">
+
+
 <br>
 
 ## Cherry-pick section
+
+
+<img src="beforeCherryPick.png" alt="before Cherry Pick"> 
+
+    git checkout feature && git cherry-pick C
+
+<img src="afterCherryPick.png" alt="after Cherry Pick">
